@@ -1,17 +1,27 @@
-"""Builds the site's pixel art: img/px-scene.png (the studio hero scene); img/og.png (link preview).
+"""Builds the site's pixel art: img/px-scene.png (the studio hero scene), img/px-knight.png (4-frame sprite strip of
+the knight's corner of the scene: cape in the wind, sword glint; CSS plays it over the scene), img/og.png (link preview).
 The Emberwrought screenshots are shown as captured, never pixelated. Run from the repo root:  python tools/make_pixels.py   (needs Pillow)."""
 import math, random
 from PIL import Image, ImageDraw
 
 W, H = 192, 120
-random.seed(7)
 NAVY = (13, 11, 30)
 BAYER = [[0, 8, 2, 10], [12, 4, 14, 6], [3, 11, 1, 9], [15, 7, 13, 5]]
 
 def lerp(a, b, t):
     return tuple(round(a[i] + (b[i] - a[i]) * t) for i in range(3))
 
-def scene():
+# cape outlines per animation frame (kx, ky = the knight's feet); frames 0-1-2-1 make a gust that comes and goes
+CAPES = [
+    [(-1, -11), (-9, -4), (-6, -3), (-12, 1), (-1, -2)],
+    [(-1, -11), (-10, -6), (-7, -4), (-13, -2), (-1, -2)],
+    [(-1, -11), (-11, -8), (-8, -6), (-14, -4), (-1, -3)],
+    [(-1, -11), (-10, -6), (-7, -4), (-13, -2), (-1, -2)],
+]
+KNIGHT_BOX = (58, 68, 88, 90)  # the sprite strip's crop of the scene: x0, y0, x1, y1
+
+def scene(frame=0):
+    random.seed(7)
     im = Image.new('RGB', (W, H), NAVY)
     px = im.load()
     # sky: banded gradient with ordered dithering between bands (a 16-bit console look)
@@ -96,10 +106,14 @@ def scene():
     d.rectangle([kx, ky - 11, kx + 3, ky - 1], fill=body)          # body
     d.rectangle([kx, ky - 15, kx + 3, ky - 12], fill=(232, 224, 208))  # helm
     px[kx - 1, ky - 15] = (232, 224, 208)
-    d.polygon([(kx - 1, ky - 11), (kx - 9, ky - 4), (kx - 6, ky - 3), (kx - 12, ky + 1), (kx - 1, ky - 2)], fill=(255, 61, 127))
-    d.line([(kx - 1, ky - 10), (kx - 7, ky - 5)], fill=(176, 30, 90))
+    d.polygon([(kx + dx, ky + dy) for dx, dy in CAPES[frame]], fill=(255, 61, 127))
+    d.line([(kx - 1, ky - 10), (kx - 7 - (frame % 2) - (2 if frame == 2 else 0), ky - 5 - (1 if frame == 2 else 0))], fill=(176, 30, 90))
     d.line([(kx + 4, ky - 6), (kx + 11, ky + 1)], fill=(207, 214, 230))  # sword
     d.rectangle([kx + 3, ky - 7, kx + 4, ky - 6], fill=(150, 120, 80))
+    if frame == 2:  # plume streams back and the blade catches the sun
+        px[kx - 2, ky - 15] = (232, 224, 208)
+        px[kx + 9, ky - 1] = (255, 255, 255)
+        px[kx + 8, ky - 2] = (255, 220, 230)
     d.rectangle([kx, ky - 1, kx + 1, ky], fill=body)
     d.rectangle([kx + 2, ky - 1, kx + 3, ky], fill=body)
     return im
@@ -108,4 +122,10 @@ if __name__ == '__main__':
     s = scene()
     s.save('img/px-scene.png', optimize=True)
     s.resize((W * 6, H * 6), Image.NEAREST).save('img/og.png', optimize=True)  # link-preview image
+    x0, y0, x1, y1 = KNIGHT_BOX
+    fw, fh = x1 - x0, y1 - y0
+    strip = Image.new('RGB', (fw * len(CAPES), fh))
+    for i in range(len(CAPES)):
+        strip.paste(scene(i).crop(KNIGHT_BOX), (i * fw, 0))
+    strip.save('img/px-knight.png', optimize=True)
     print('ok')

@@ -38,6 +38,11 @@ nav .links a:hover, nav .links a.on { color: var(--pink); border-bottom-color: v
 .sub { display: flex; align-items: center; gap: 18px; margin: 18px 0 26px; font: 400 clamp(14px, 1.8vw, 22px)/1 var(--display); letter-spacing: 0.55em; text-transform: uppercase; }
 .sub::before, .sub::after { content: ''; flex: 1; max-width: 90px; height: 3px; background: var(--dim); }
 .tag { font: 400 clamp(14px, 1.6vw, 19px)/1.4 var(--display); letter-spacing: 0.3em; text-transform: uppercase; margin: 0 0 34px; }
+/* the knight's cape in the wind: a 4-frame strip (tools/make_pixels.py, KNIGHT_BOX 58,68 → 88,90 of the 192×120 scene) */
+.scene { position: relative; }
+.knight { position: absolute; left: calc(58 / 192 * 100%); top: calc(68 / 120 * 100%); width: calc(30 / 192 * 100%); height: calc(22 / 120 * 100%);
+  background: url(img/px-knight.png) 0 0 / 400% 100% no-repeat; image-rendering: pixelated; animation: cape 1s steps(4) infinite; }
+@keyframes cape { to { background-position: 133.333% 0; } }
 .scene img { display: block; width: 100%; height: auto;
   -webkit-mask-image: radial-gradient(ellipse 72% 78% at 55% 46%, #000 62%, transparent 100%);
   mask-image: radial-gradient(ellipse 72% 78% at 55% 46%, #000 62%, transparent 100%); }
@@ -102,4 +107,4 @@ footer { border-top: 2px solid var(--line); padding: 26px 16px; text-align: cent
   .shots .frame:last-child { display: none; }
   .btn { padding: 14px 18px; letter-spacing: 0.15em; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .knight { animation: none; } }
