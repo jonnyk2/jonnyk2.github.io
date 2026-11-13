@@ -4,8 +4,8 @@ Static site: `index.html`, `style.css`, `img/`, `CNAME`, `emberwrought/`. No bui
 
 Look: minimalist 16-bit. Fonts Silkscreen (display) and Pixelify Sans (body); navy `#0d0b1e`, cream, pink `#ff3d7f`.
 The pixel art is generated small and scaled up crisp (`image-rendering: pixelated`): `python tools/make_pixels.py`
-redraws `img/px-scene.png` (the hero scene), `img/og.png` (link preview) and `img/px-shot-*.png` (16-bit versions
-of the `img/shot-*.jpg` screenshots, which stay as the sources).
+redraws `img/px-scene.png` (the hero scene), `img/og.png` (link preview). The 16-bit look is the studio's
+brand only: Emberwrought screenshots (`img/shot-*.jpg`) are always shown as captured, never pixelated.
 
 ## The Emberwrought website (`emberwrought/`)
 

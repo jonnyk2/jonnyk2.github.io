@@ -1,7 +1,7 @@
-"""Builds the site's pixel art: img/px-scene.png (the studio hero scene) and img/px-*.png (16-bit versions
-of the Emberwrought screenshots). Run from the repo root:  python tools/make_pixels.py   (needs Pillow)."""
+"""Builds the site's pixel art: img/px-scene.png (the studio hero scene); img/og.png (link preview).
+The Emberwrought screenshots are shown as captured, never pixelated. Run from the repo root:  python tools/make_pixels.py   (needs Pillow)."""
 import math, random
-from PIL import Image, ImageDraw, ImageEnhance
+from PIL import Image, ImageDraw
 
 W, H = 192, 120
 random.seed(7)
@@ -104,19 +104,8 @@ def scene():
     d.rectangle([kx + 2, ky - 1, kx + 3, ky], fill=body)
     return im
 
-def pixelate(src, out, w=240, colors=40):
-    im = Image.open(src).convert('RGB')
-    im = ImageEnhance.Brightness(im).enhance(1.35)
-    im = ImageEnhance.Contrast(im).enhance(1.15)
-    im = ImageEnhance.Color(im).enhance(1.25)
-    h = round(im.height * w / im.width)
-    q = im.resize((w, h), Image.BOX).quantize(colors=colors, method=Image.MEDIANCUT, dither=Image.NONE)
-    q.save(out, optimize=True)
-
 if __name__ == '__main__':
     s = scene()
     s.save('img/px-scene.png', optimize=True)
     s.resize((W * 6, H * 6), Image.NEAREST).save('img/og.png', optimize=True)  # link-preview image
-    for name in ('shot-crypt-boss', 'shot-frostfang', 'shot-gravenhold', 'shot-mycelia'):
-        pixelate(f'img/{name}.jpg', f'img/px-{name}.png')
     print('ok')

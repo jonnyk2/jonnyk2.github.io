@@ -67,7 +67,7 @@ main section { max-width: 1240px; margin: 0 auto; padding: clamp(50px, 9vh, 90px
 .big { font: 400 clamp(20px, 2.6vw, 30px)/1.45 var(--display); letter-spacing: 0.04em; margin: 0 0 26px; max-width: 900px; }
 
 .frame { margin: 0; padding: var(--px); background: var(--line); }
-.frame img { display: block; width: 100%; height: auto; }
+.frame img { display: block; width: 100%; height: auto; image-rendering: auto; } /* game shots stay as captured */
 
 .game { display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(24px, 4vw, 48px); align-items: center; }
 .badge { display: inline-block; margin: 0 0 18px; padding: 8px 14px; background: var(--bg2); color: var(--pink); font: 400 12px/1 var(--display); letter-spacing: 0.25em; text-transform: uppercase; }
