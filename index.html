@@ -3,71 +3,90 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ChaosVibe — Independent game studio</title>
+<title>ChaosVibe — Game Studio</title>
 <meta name="description" content="ChaosVibe is an independent game studio. Now making Emberwrought, a dark-fantasy action RPG coming 2027.">
-<meta property="og:title" content="ChaosVibe — Independent game studio">
-<meta property="og:description" content="Now making Emberwrought, a dark-fantasy action RPG. Coming 2027.">
-<meta property="og:image" content="img/hero.jpg">
-<meta name="theme-color" content="#08070a">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2308070a'/><path d='M9 23 16 7l7 16M12 17h8' stroke='%23e07a2a' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<meta property="og:title" content="ChaosVibe — Game Studio">
+<meta property="og:description" content="Small studio. Big ideas. Now making Emberwrought, a dark-fantasy action RPG. Coming 2027.">
+<meta property="og:image" content="https://chaosvibe.com/img/og.png">
+<meta property="og:url" content="https://chaosvibe.com/">
+<meta name="theme-color" content="#0d0b1e">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'><rect width='8' height='8' fill='%230d0b1e'/><path fill='%23f3ead8' d='M1 1h3v1H2v4h2v1H1z'/><path fill='%23ff3d7f' d='M4 3h1v2h1V3h1v3H6v1H5V6H4z'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Spectral:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <nav class="top">
-  <a class="brand" href="#top">Chaos<span>Vibe</span></a>
-  <span class="links"><a href="#games">Games</a><a href="#studio">Studio</a><a href="#contact">Contact</a></span>
+  <a class="brand" href="#top" aria-label="ChaosVibe, game studio">
+    <span class="mark" aria-hidden="true">C<b>V</b></span>
+    <span class="name">ChaosVibe<small>Game studio</small></span>
+  </a>
+  <span class="links"><a class="on" href="#top">Home</a><a href="#games">Games</a><a href="#about">About</a><a href="#contact">Contact</a></span>
 </nav>
 
-<header class="intro" id="top">
-  <p class="kicker">Independent game studio</p>
-  <h1>We make worlds<br><em>worth getting lost in.</em></h1>
-  <p class="lede">ChaosVibe is a small independent studio building atmospheric action games you can play right in your browser.</p>
-  <a class="btn" href="#games">See what we're making</a>
+<header class="hero" id="top">
+  <div class="title">
+    <h1>Chaos<b>V</b>ibe</h1>
+    <p class="sub"><span>Game studio</span></p>
+    <p class="tag">Small studio. <b>Big ideas.</b></p>
+    <div class="cta">
+      <a class="btn" href="#games"><span class="tri" aria-hidden="true"></span>Our games</a>
+      <a class="btn ghost" href="#about">About us</a>
+    </div>
+  </div>
+  <div class="scene"><img src="img/px-scene.png" width="192" height="120" alt="Pixel art: a caped knight on a cliff looks out at a castle against a setting sun"></div>
 </header>
 
+<section class="pillars" aria-label="What we do">
+  <div><svg class="px-icon" viewBox="0 0 14 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="var(--cream)" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM11 0h1v1h-1zM1 1h1v1h-1zM12 1h1v1h-1zM0 2h1v1h-1zM13 2h1v1h-1zM0 3h1v1h-1zM13 3h1v1h-1zM0 4h1v1h-1zM13 4h1v1h-1zM0 5h1v1h-1zM13 5h1v1h-1zM0 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM7 6h1v1h-1zM8 6h1v1h-1zM9 6h1v1h-1zM13 6h1v1h-1zM1 7h1v1h-1zM2 7h1v1h-1zM3 7h1v1h-1zM10 7h1v1h-1zM11 7h1v1h-1zM12 7h1v1h-1z"/><path fill="var(--pink)" d="M3 2h1v1h-1zM11 2h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM10 3h1v1h-1zM12 3h1v1h-1zM3 4h1v1h-1zM10 4h1v1h-1zM11 4h1v1h-1z"/></svg><span>Develop</span></div>
+  <div><svg class="px-icon" viewBox="0 0 12 11" shape-rendering="crispEdges" aria-hidden="true"><path fill="var(--cream)" d="M10 0h1v1h-1zM11 0h1v1h-1zM9 1h1v1h-1zM11 1h1v1h-1zM8 2h1v1h-1zM10 2h1v1h-1zM7 3h1v1h-1zM9 3h1v1h-1zM6 4h1v1h-1zM8 4h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM4 6h1v1h-1zM7 6h1v1h-1zM3 7h1v1h-1zM6 7h1v1h-1zM2 8h1v1h-1zM5 8h1v1h-1zM1 9h1v1h-1zM4 9h1v1h-1zM0 10h1v1h-1zM2 10h1v1h-1z"/><path fill="var(--pink)" d="M5 6h1v1h-1zM6 6h1v1h-1zM4 7h1v1h-1zM5 7h1v1h-1zM3 8h1v1h-1zM4 8h1v1h-1zM2 9h1v1h-1zM3 9h1v1h-1zM1 10h1v1h-1z"/></svg><span>Create</span></div>
+  <div><svg class="px-icon" viewBox="0 0 11 9" shape-rendering="crispEdges" aria-hidden="true"><path fill="var(--cream)" d="M1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM0 1h1v1h-1zM4 1h1v1h-1zM6 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM5 2h1v1h-1zM10 2h1v1h-1zM0 3h1v1h-1zM10 3h1v1h-1zM1 4h1v1h-1zM9 4h1v1h-1zM2 5h1v1h-1zM8 5h1v1h-1zM3 6h1v1h-1zM7 6h1v1h-1zM4 7h1v1h-1zM6 7h1v1h-1zM5 8h1v1h-1zM2 2h1v1h-1z"/><path fill="var(--pink)" d="M1 1h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM1 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM5 7h1v1h-1z"/></svg><span>Play</span></div>
+</section>
+
 <main>
-<section id="games" class="featured">
-  <div class="art"><img src="img/hero.jpg" alt="A torchlit crypt in Emberwrought"></div>
-  <div class="card">
-    <p class="kicker">Featured · Now in development</p>
-    <img class="logo" src="img/logo-for-dark-backgrounds.png" alt="Emberwrought" width="1669" height="296">
-    <p>The last fire in the Hollowmark is going out. Fight through dungeons that rebuild themselves every time you descend, master the combos of over twenty classes, and come home to a homestead your villagers raise around you.</p>
-    <ul class="facts">
-      <li><b>Genre</b>Dark-fantasy action RPG</li>
-      <li><b>Platform</b>PC browser · Steam 2027</li>
-      <li><b>Status</b>In development · closed alpha</li>
-    </ul>
-    <div class="cta">
-      <a class="btn" href="emberwrought/">Game website</a>
-      <a class="btn ghost" href="emberwrought/press.html">Press kit</a>
-      <a class="btn ghost" href="https://chaos-vibe.itch.io/emberwrought">itch.io page</a>
+<section id="games" class="games">
+  <h2 class="kicker">Games</h2>
+  <article class="game">
+    <figure class="frame"><img src="img/px-shot-gravenhold.png" width="240" height="135" alt="Pixel-art view of Gravenhold, the last lit town in Emberwrought"></figure>
+    <div class="info">
+      <p class="badge">Now in development</p>
+      <img class="logo" src="img/logo-for-dark-backgrounds.png" alt="Emberwrought" width="1669" height="296">
+      <p>The last fire in the Hollowmark is going out. Fight through dungeons that rebuild themselves every time you descend, master the combos of over twenty classes, and come home to a homestead your villagers raise around you.</p>
+      <dl class="facts">
+        <div><dt>Genre</dt><dd>Dark-fantasy action RPG</dd></div>
+        <div><dt>Platform</dt><dd>PC browser · Steam 2027</dd></div>
+        <div><dt>Status</dt><dd>Closed alpha</dd></div>
+      </dl>
+      <div class="cta">
+        <a class="btn" href="emberwrought/"><span class="tri" aria-hidden="true"></span>Game website</a>
+        <a class="btn ghost" href="emberwrought/press.html">Press kit</a>
+      </div>
     </div>
+  </article>
+  <div class="shots">
+    <figure class="frame"><img src="img/px-shot-crypt-boss.png" width="240" height="135" alt="A boss fight in a crypt" loading="lazy"></figure>
+    <figure class="frame"><img src="img/px-shot-frostfang.png" width="240" height="135" alt="The Frostfang Highlands" loading="lazy"></figure>
+    <figure class="frame"><img src="img/px-shot-mycelia.png" width="240" height="135" alt="The fungal land of Mycelia" loading="lazy"></figure>
   </div>
 </section>
 
-<section class="shots" aria-label="Emberwrought screenshots">
-  <figure><img src="img/shot-crypt-boss.jpg" alt="A boss fight in a crypt" loading="lazy"></figure>
-  <figure><img src="img/shot-frostfang.jpg" alt="The Frostfang Highlands" loading="lazy"></figure>
-  <figure><img src="img/shot-gravenhold.jpg" alt="Gravenhold, the last lit town" loading="lazy"></figure>
-  <figure><img src="img/shot-mycelia.jpg" alt="The fungal land of Mycelia" loading="lazy"></figure>
-</section>
-
-<section id="studio" class="studio">
-  <p class="kicker">The studio</p>
-  <h2>Small team, big ambitions</h2>
+<section id="about" class="about">
+  <h2 class="kicker">About</h2>
+  <p class="big">One developer. A crew of AI agents. <b>Built in the open.</b></p>
   <div class="cols">
-    <p>ChaosVibe is one developer directing a crew of AI agents. Design, code, art and testing run side by side every day, so the game moves fast and players see real changes from week to week.</p>
-    <p>We build in the open: players test early builds in the browser, and their bug reports shape what comes next. Emberwrought is our first game, and we mean for it to grow into a world people share.</p>
+    <p>Design, code, art and testing run side by side every day, so our games move fast and players see real changes from week to week.</p>
+    <p>We build in the open: players test early builds in the browser, and their bug reports shape what comes next. Emberwrought is our first game.</p>
   </div>
 </section>
 
 <section id="contact" class="contact">
-  <h2>Say hello</h2>
-  <p>Press, partners and players: write to us at <a href="mailto:contact@chaosvibe.com">contact@chaosvibe.com</a>.</p>
-  <div class="cta"><a class="btn" href="mailto:contact@chaosvibe.com">Email ChaosVibe</a><a class="btn ghost" href="https://chaos-vibe.itch.io">ChaosVibe on itch.io</a></div>
+  <h2 class="kicker">Contact</h2>
+  <p class="big">Press, partners, players: <a href="mailto:contact@chaosvibe.com">contact@chaosvibe.com</a></p>
+  <div class="cta">
+    <a class="btn" href="mailto:contact@chaosvibe.com">Send a message</a>
+    <a class="btn ghost" href="https://chaos-vibe.itch.io">itch.io</a>
+  </div>
 </section>
 </main>
 
