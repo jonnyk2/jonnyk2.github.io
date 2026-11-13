@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emberwrought — Coming 2027</title>
+<meta name="description" content="The last fire in the Hollowmark is going out. Emberwrought is a dark fantasy action RPG: 24 classes, 16 peoples, 11 lands, levels 1 to 60, and a hearth of your own to defend. Closed alpha this December. Coming 2027.">
+<meta property="og:title" content="Emberwrought — Chronicles of the Hollowmark · Coming 2027">
+<meta property="og:description" content="The last fire in the Hollowmark is going out. A dark fantasy action RPG. Sign up for the closed alpha.">
+<meta property="og:image" content="img/share.jpg">
+<meta name="theme-color" content="#050405">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 2c3 7 9 9 9 17a9 9 0 0 1-18 0c0-5 3-7 4-11 1 3 2 4 3 4 0-4 1-7 2-10z' fill='%23e07a2a'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cinzel+Decorative:wght@700;900&family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="descent-page">
+<!-- TODO: the Discord invite. Every link with class "discord" points at it; replace href="#discord" with the invite URL. -->
+<nav class="top">
+  <a class="brand" href="#top">Emberwrought</a>
+  <span class="links"><a href="#gravenhold">The world</a><a href="#heroes">Heroes</a><a href="#devlog">Devlog</a><a class="pill" href="#top" data-signup>Sign up for the alpha</a></span>
+</nav>
+
+<!-- the depth gauge: where in the 1 to 60 descent the reader is -->
+<aside class="gauge" aria-hidden="true"><span class="gauge-line"><i></i></span><b class="gauge-lv">1</b><span class="gauge-name">Gravenhold</span></aside>
+
+<header class="hero" id="top">
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="media/hero-poster.jpg" aria-hidden="true">
+    <source src="media/hero.webm" type="video/webm">
+    <source src="media/hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-in">
+    <h1>Emberwrought</h1>
+    <p class="sub">Chronicles of the Hollowmark</p>
+    <p class="when">Coming 2027</p>
+    <p class="hook">The last fire in the Hollowmark is going out. Be one of the first to carry it: a closed alpha runs this December, in your browser.</p>
+
+    <section id="alpha" class="signup" aria-label="Sign up for the alpha">
+      <form class="su-form" novalidate>
+        <label class="contact">Email or Discord name
+          <span class="row"><input name="contact" autocomplete="email" maxlength="254" placeholder="you@example.com or emberfan" required><button type="submit" class="btn">Sign up</button></span>
+        </label>
+        <label class="chk consent"><input type="checkbox" name="consent" required> <span>I agree that Emberwrought keeps my email or Discord name, my answers, my machine-check result (graphics chip, browser, system, frame rate) and my connection's IP address, only to choose alpha players, send invites and stop spam. Nothing is shared or sold. It's all deleted when the alpha ends, by 31 January 2027. To be removed sooner, ask on our Discord or reply to any email from us. <a href="privacy.html" target="_blank">Privacy details</a></span></label>
+        <label class="chk consent"><input type="checkbox" name="notify"> <span><b>Optional:</b> tell me when Emberwrought launches on Steam. For this we keep only your email or Discord name, nothing else, never shared, until you ask us to remove it.</span></label>
+        <details class="more"><summary>Tell us what you play <span class="dim">(optional)</span></summary>
+          <fieldset><legend class="sr">What do you like to play?</legend>
+            <label class="chk"><input type="checkbox" name="plays" value="arpg"> Action RPGs</label>
+            <label class="chk"><input type="checkbox" name="plays" value="building"> Building and farming</label>
+            <label class="chk"><input type="checkbox" name="plays" value="new"> I'm new to games like this</label>
+            <label class="chk"><input type="checkbox" name="plays" value="other"> Something else</label>
+          </fieldset>
+          <label>Anything you'd like us to know? <input name="about" maxlength="300"></label>
+        </details>
+        <label class="hp" aria-hidden="true">Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label>
+        <p class="fine">Signing up runs a 10-second 3D test, so we can invite a good mix of machines.</p>
+        <p class="fine actions"><button type="button" class="link mc-skip">Sign up without the test</button><button type="button" class="link mc-only">Just test my machine</button></p>
+        <p class="su-msg" aria-live="polite"></p>
+      </form>
+      <div class="mc" hidden>
+        <canvas class="mc-canvas" width="640" height="360" hidden></canvas>
+        <p class="mc-out" aria-live="polite"></p>
+        <div class="mc-verdict" hidden aria-live="polite"><b></b><p></p><small></small></div>
+      </div>
+      <div class="su-done" hidden><h2>You're on the list</h2><p></p><a class="btn ghost discord" href="#discord">Join the Discord</a></div>
+      <p class="closes">Sign-ups close Friday 11 December, 23:59 UTC.</p>
+    </section>
+  </div>
+</header>
+
+<main class="descent">
+<section id="gravenhold" class="depth" data-lv="1" data-name="Gravenhold" style="--tint: 34, 22, 14">
+  <div class="split">
+    <figure class="wide"><img src="img/gravenhold.jpg" alt="The market square of Gravenhold at night, lamps lit" loading="lazy"></figure>
+    <div class="txt">
+      <h2>Gravenhold, the last lit town</h2>
+      <p>Under the keep and the cathedral, the market still trades and Captain Hask still posts bounties. Beyond the walls, the dead no longer stay buried.</p>
+      <p>Raise your own hearth on the ruins of a dead one. You choose what to build and your villagers raise it over time. Crops grow in real time, even while you're away, and salvage fills your storehouse.</p>
+    </div>
+    <figure class="tall"><img src="img/cathedral.jpg" alt="The cathedral and timbered houses at the edge of Gravenhold" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="depth" data-lv="5" data-name="The Hollowmark" style="--tint: 24, 20, 12">
+  <div class="split flip">
+    <div class="txt">
+      <h2>The wilds hunt back</h2>
+      <p>Named monsters roam the Barrow Fields, the Blightwood, the Mirefen and the Cinderwaste. Raiders hold a walled fort in every land, and when all three beacons burn, the Dread Rifts open.</p>
+    </div>
+    <figure class="wide"><img src="img/fort.jpg" alt="A warrior storming a raider fort in the Hollowmark" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="depth" data-lv="12" data-name="The fight" style="--tint: 22, 14, 12">
+  <div class="split">
+    <figure class="wide"><img src="img/fight.jpg" alt="A huntsman holding a road against frost beasts in the Frostfang Highlands" loading="lazy"></figure>
+    <div class="txt">
+      <h2>Every swing is yours</h2>
+      <p>Move with WASD and aim with the mouse. Chain light and heavy attacks into combos, roll through a wind-up, block, and time your parries.</p>
+      <p>Weapons are built from parts that change how they fight, and fire, frost, lightning and poison combo off each other.</p>
+    </div>
+    <figure class="tall"><img src="img/cast.jpg" alt="A pyromancer's cinder barrage bursting among scarabs in the Sunscar Desert" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="depth" data-lv="14" data-name="The deep" style="--tint: 14, 10, 12">
+  <div class="split flip">
+    <div class="txt">
+      <h2>The deep is never the same twice</h2>
+      <p>Every dungeon is rebuilt when you enter, with traps, ambushes and rising Dread, and a boss at the bottom. Clear it and it comes back deeper and richer. Below the mountains, the caves go down two floors more.</p>
+    </div>
+    <figure class="wide"><img src="img/crypt.jpg" alt="A templar facing Morvane, the Hollow Bishop, in the Hollow Crypt" loading="lazy"></figure>
+  </div>
+  <figure class="full"><img src="img/forge.jpg" alt="A berserker facing Varg the Slagborn in the Forge-Pit" loading="lazy"></figure>
+  <div class="bosses"><h3>Waiting at the bottom</h3><ul></ul></div>
+</section>
+
+<section id="heroes" class="depth" data-lv="17" data-name="Heroes" style="--tint: 12, 9, 14">
+  <h2 class="center"><span data-n="classes">24</span> heroes, sixteen peoples</h2>
+  <p class="center lead">Play as a human or a dwarf, a crow-headed Rookfolk, an ash-skinned Ashborn, a Croakfolk, a Shellback or a Pandakin, and choose how they fight.</p>
+  <div class="roster">
+    <div class="names" role="tablist" aria-label="Classes"></div>
+    <article class="hero-card" role="tabpanel" aria-live="polite"></article>
+  </div>
+</section>
+
+<section id="journey" class="depth" data-lv="18" data-name="Beyond the Hollowmark" style="--tint: 8, 6, 14">
+  <h2 class="center">The road from 1 to 60</h2>
+  <p class="center lead">Ten more lands lie past the Hollowmark, each with a camp, a fort and dungeons of its own, all the way to the edge of everything.</p>
+  <ol class="road"></ol>
+</section>
+
+<section id="devlog" class="depth devlog" data-lv="60" data-name="Devlog" style="--tint: 6, 5, 8">
+  <h2 class="center">Forged in the open</h2>
+  <p class="center lead">Emberwrought is made by one developer, in public, a build at a time.</p>
+  <ol class="log">
+    <li><figure><img src="img/devlog/2026-11-11.jpg" alt="Gravenhold at night with the new keep" loading="lazy"></figure><div><time datetime="2026-11-11">11 November 2026</time><h3>A grand keep, a cathedral and forts in every land</h3><p>Gravenhold rebuilt and relit, a walled fort for each land's raiders, caves under the mountains, and sixteen peoples to play.</p></div></li>
+    <li><figure><img src="img/devlog/2026-11-07.jpg" alt="The Hollow Crypt in the 7 November build" loading="lazy"></figure><div><time datetime="2026-11-07">7 November 2026</time><h3>Monsters in 3D, stances, blocks and parries</h3><p>The bestiary moved to 3D models, and fights gained blocking, parries and stances.</p></div></li>
+    <li><figure><img src="img/devlog/2026-11-03.jpg" alt="The Hollow Crypt in the first playable build" loading="lazy"></figure><div><time datetime="2026-11-03">3 November 2026</time><h3>The first playable build</h3><p>Gravenhold, three dungeons and their bosses, playable free in the browser on itch.io.</p></div></li>
+  </ol>
+</section>
+
+<section id="discord" class="final">
+  <h2>The fire returns in 2027</h2>
+  <p>Sign up for the closed alpha this December, or join the community to follow the build.</p>
+  <div class="cta"><a class="btn" href="#top" data-signup>Sign up for the alpha</a><a class="btn ghost discord" href="#discord">Join the Discord</a></div>
+</section>
+</main>
+
+<footer>Emberwrought · Chronicles of the Hollowmark · A <a href="https://chaosvibe.com">ChaosVibe</a> game · <a href="press.html">Press kit</a> · <a href="privacy.html">Privacy</a></footer>
+
+<script src="data.js"></script>
+<script src="site.js"></script>
+<script type="module" src="alpha.js"></script>
+</body>
+</html>

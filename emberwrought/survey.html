@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alpha survey · Emberwrought</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#050405">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<!-- Linked from the game's Menu as survey.html?build=<version>&wave=<n> (both optional). Answers go to alpha_survey. -->
+<nav class="top solid"><a class="brand" href="./">Emberwrought</a></nav>
+<main class="doc">
+  <h1>How were your first hours in the alpha?</h1>
+  <p>Eight short questions, about five minutes. Honest answers help most, especially the bad bits.</p>
+
+  <form class="su-form sv-form card" novalidate>
+    <fieldset><legend>1. What did you play?</legend>
+      <label>Class <select name="cls"></select></label>
+      <label>Roughly how long <select name="played">
+        <option value="">Choose…</option><option value="lt30">Under 30 minutes</option><option value="30to60">30 minutes to an hour</option>
+        <option value="1to2h">1 to 2 hours</option><option value="gt2h">More than 2 hours</option></select></label>
+    </fieldset>
+    <label>2. Where did you stop, or feel lost? <textarea name="stopped" rows="3" maxlength="1000"></textarea></label>
+    <label>3. The moment you liked most <textarea name="liked" rows="3" maxlength="1000"></textarea></label>
+    <fieldset><legend>4. How did the fights feel? <span class="dim">(1 = no fun, 5 = loved them)</span></legend>
+      <div class="opts">
+        <label class="chk"><input type="radio" name="fights" value="1"> 1</label><label class="chk"><input type="radio" name="fights" value="2"> 2</label>
+        <label class="chk"><input type="radio" name="fights" value="3"> 3</label><label class="chk"><input type="radio" name="fights" value="4"> 4</label>
+        <label class="chk"><input type="radio" name="fights" value="5"> 5</label>
+      </div>
+      <label>In a line, why? <span class="dim">(optional)</span> <input name="fights_note" maxlength="300"></label>
+    </fieldset>
+    <fieldset><legend>5. Did it run well on your machine?</legend>
+      <div class="opts">
+        <label class="chk"><input type="radio" name="ran" value="yes"> Yes</label><label class="chk"><input type="radio" name="ran" value="sometimes"> Sometimes it stuttered</label>
+        <label class="chk"><input type="radio" name="ran" value="no"> No</label>
+      </div>
+      <p class="dim small">If you ran "Test my machine" on our website in this browser, its result is sent along.</p>
+    </fieldset>
+    <fieldset><legend>6. Would you play again tomorrow?</legend>
+      <div class="opts">
+        <label class="chk"><input type="radio" name="again" value="yes"> Yes</label><label class="chk"><input type="radio" name="again" value="maybe"> Maybe</label>
+        <label class="chk"><input type="radio" name="again" value="no"> No</label>
+      </div>
+    </fieldset>
+    <label>7. One thing you'd change <textarea name="change" rows="3" maxlength="1000"></textarea></label>
+    <label>8. May we ask you about your answers? Leave an email or Discord name. <span class="dim">(optional)</span> <input name="contact" maxlength="254" autocomplete="email"></label>
+    <label class="hp" aria-hidden="true">Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label>
+    <!-- Same terms as the sign-up; the owner approves the wording with it. -->
+    <label class="chk consent"><input type="checkbox" name="consent" required> <span>I agree that Emberwrought keeps my answers, the game version, my machine details (graphics chip, browser, system, frame rate if I ran the test) and my connection's IP address, only to improve the game and stop spam. If I left an email or Discord name, it's used only to ask about my answers. Nothing is shared or sold. It's all deleted when the alpha ends, by 31 January 2027. To be removed sooner, ask on our Discord. <a href="privacy.html" target="_blank">Privacy details</a></span></label>
+    <button type="submit" class="btn">Send my answers</button>
+    <p class="su-msg" aria-live="polite"></p>
+  </form>
+  <div class="su-done card" hidden><h3>Thank you</h3><p>Your answers are in. They go straight into what we fix next.</p></div>
+</main>
+<footer>Emberwrought · Chronicles of the Hollowmark.</footer>
+<script src="data.js"></script>
+<script type="module" src="survey.js"></script>
+</body>
+</html>

@@ -1,12 +1,21 @@
 # ChaosVibe studio website
 
-Static site: `index.html`, `style.css`, `img/`, `CNAME`. No build step. Live at https://chaosvibe.com.
+Static site: `index.html`, `style.css`, `img/`, `CNAME`, `emberwrought/`. No build step. Live at https://chaosvibe.com.
+
+## The Emberwrought website (`emberwrought/`)
+
+A copy of the Emberwrought repo's `website/` folder (minus `gen.mjs`), served at
+`https://chaosvibe.com/emberwrought/`. The Emberwrought repo stays **private**; never make it public
+to host the site. The source of truth is still `website/` in that repo: after it changes, refresh the copy
+from the Emberwrought repo root:
+
+    S=~/chaosvibe-site/emberwrought; rm -rf $S && cp -r website $S && rm $S/gen.mjs
+
+then commit and push here.
 
 ## Publish on GitHub Pages
 
-The repo is the account's **user site**, `jonnyk2.github.io`. Because the user site carries the custom
-domain, every project site on the account moves under it too, so the Emberwrought website (Pages from the
-Emberwrought repo) is served at `https://chaosvibe.com/Emberwrought/`, which the studio site links to.
+The repo is the account's user site, `jonnyk2.github.io` (public, Pages from `main` / root).
 
 1. Create an empty **public** repo named exactly `jonnyk2.github.io` (no README), then push this one:
    `git remote add origin https://github.com/jonnyk2/jonnyk2.github.io.git && git push -u origin main`
