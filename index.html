@@ -35,7 +35,30 @@
       <a class="btn ghost" href="#about">About us</a>
     </div>
   </div>
-  <div class="scene"><img src="img/px-scene.png" width="192" height="120" alt="Pixel art: a caped knight on a cliff looks out at a castle against a setting sun"><span class="knight" aria-hidden="true"></span></div>
+  <!-- Layered pixel scene (tools/make_pixels.py). Positions are in scene pixels (192x120). -->
+  <div class="scene">
+    <img src="img/px-back.png" width="192" height="120" alt="Pixel art: a caped knight on a cliff looks out at a castle against a setting sun">
+    <div class="fx" aria-hidden="true">
+      <i class="star" style="--x:14;--y:8;--t:4.2s;--d:-0.4s"></i><i class="star" style="--x:33;--y:22;--t:5.1s;--d:-2.2s"></i>
+      <i class="star" style="--x:52;--y:6;--t:3.7s;--d:-1.1s"></i><i class="star" style="--x:61;--y:38;--t:6.3s;--d:-3.9s"></i>
+      <i class="star" style="--x:88;--y:14;--t:4.8s;--d:-0.9s"></i><i class="star" style="--x:97;--y:40;--t:5.6s;--d:-4.4s"></i>
+      <i class="star" style="--x:150;--y:10;--t:4.4s;--d:-2.8s"></i><i class="star" style="--x:171;--y:30;--t:3.9s;--d:-1.7s"></i>
+      <i class="star" style="--x:184;--y:12;--t:5.3s;--d:-3.1s"></i><i class="star" style="--x:26;--y:32;--t:6s;--d:-5s"></i>
+      <span class="cloud" style="--x:40;--y:44;--w:19;--n:211;--t:140s;--d:-39.1s;background-image:url(img/px-cloud-18.png)"></span>
+      <span class="cloud" style="--x:70;--y:28;--w:27;--n:219;--t:150s;--d:-66.4s;background-image:url(img/px-cloud-26.png)"></span>
+      <span class="cloud" style="--x:100;--y:58;--w:35;--n:227;--t:110s;--d:-65.4s;background-image:url(img/px-cloud-34.png)"></span>
+      <span class="cloud" style="--x:150;--y:22;--w:21;--n:213;--t:170s;--d:-136.5s;background-image:url(img/px-cloud-20.png)"></span>
+      <span class="cloud" style="--x:164;--y:62;--w:23;--n:215;--t:120s;--d:-104.4s;background-image:url(img/px-cloud-22.png)"></span>
+      <img class="front" src="img/px-front.png" width="192" height="120" alt="">
+      <i class="win" style="--x:115;--y:62;--t:2.3s;--d:-0.5s"></i><i class="win" style="--x:123;--y:58;--t:3.1s;--d:-1.9s"></i>
+      <i class="win" style="--x:131;--y:61;--t:2.7s;--d:-1.2s"></i><i class="win" style="--x:127;--y:44;--t:3.6s;--d:-2.6s"></i>
+      <i class="win" style="--x:137;--y:64;--t:2.9s;--d:-0.2s"></i>
+      <span class="knight"></span>
+      <i class="fly" style="--x:12;--y:83;--t:7s;--d:-1s"></i><i class="fly" style="--x:38;--y:81;--t:8.5s;--d:-4s"></i>
+      <i class="fly" style="--x:54;--y:82;--t:6.5s;--d:-2.5s"></i><i class="fly" style="--x:108;--y:101;--t:7.5s;--d:-5.5s"></i>
+      <i class="fly" style="--x:140;--y:100;--t:9s;--d:-3s"></i>
+    </div>
+  </div>
 </header>
 
 <section class="pillars" aria-label="What we do">
