@@ -105,6 +105,13 @@ main section { max-width: 1240px; margin: 0 auto; padding: clamp(50px, 9vh, 90px
 .game { display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(24px, 4vw, 48px); align-items: center; }
 .badge { display: inline-block; margin: 0 0 18px; padding: 8px 14px; background: var(--bg2); color: var(--pink); font: 400 12px/1 var(--display); letter-spacing: 0.25em; text-transform: uppercase; }
 .info .logo { width: 100%; max-width: 400px; height: auto; display: block; margin: 0 0 14px; }
+/* ThroneScape title lockup: the game's own illuminated look, not the studio's 16-bit style */
+.ts-logo { display: grid; justify-items: start; margin: 0 0 18px; max-width: 420px; }
+.ts-word { display: flex; align-items: flex-end; gap: 2px; filter: drop-shadow(0 2px 0 #2b1a07) drop-shadow(0 8px 16px rgba(0,0,0,.6)); }
+.ts-initial { width: clamp(52px, 6vw, 74px); height: auto; margin-bottom: -.05em; }
+.ts-rest { font: 400 clamp(40px, 5.6vw, 70px)/.82 'Pirata One', Georgia, serif; background: linear-gradient(180deg, #fff0c8 0%, #e2bd76 55%, #b3833c 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent; }
+.ts-ribbon { width: 100%; height: auto; margin-top: -4px; }
 .info p { margin: 0 0 18px; color: #d8d0e8; }
 .facts { margin: 0 0 26px; display: grid; gap: 8px; }
 .facts div { display: flex; gap: 14px; }
