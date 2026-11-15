@@ -1,22 +1,18 @@
 # ChaosVibe studio website
 
-Static site: `index.html`, `style.css`, `img/`, `CNAME`, `herosreach/`. No build step. Live at https://chaosvibe.com.
+Static site: `index.html`, `style.css`, `img/`, `CNAME`, `emberwrought/` (redirects only). No build step. Live at https://chaosvibe.com.
 
 Look: minimalist 16-bit. Fonts Silkscreen (display) and Pixelify Sans (body); navy `#0d0b1e`, cream, pink `#ff3d7f`.
 The pixel art is generated small and scaled up crisp (`image-rendering: pixelated`): `python tools/make_pixels.py`
 redraws `img/px-scene.png` (the hero scene), `img/og.png` (link preview). The 16-bit look is the studio's
 brand only: the game's screenshots (`img/shot-*.jpg`) are always shown as captured, never pixelated.
 
-## The Hero's Reach website (`herosreach/`)
+## The game's website
 
-A copy of the game repo's `website/` folder (minus `gen.mjs`), served at
-`https://chaosvibe.com/herosreach/` (`emberwrought/` only holds redirects to it, for old links). The game repo stays **private**; never make it public
-to host the site. The source of truth is still `website/` in that repo: after it changes, refresh the copy
-from the game repo root:
-
-    S=~/chaosvibe-site/herosreach; rm -rf $S && cp -r website $S && rm $S/gen.mjs
-
-then commit and push here.
+Heroes' Reach has its own site, in its own small public repo (`jonnyk2/heroesreach`, served at https://heroesreach.com).
+This studio site only links to it (`https://heroesreach.com/` and `/press.html`). `emberwrought/` holds two redirect
+pages that send old links to https://heroesreach.com/. The game itself lives in a separate **private** repo; never make
+it public. Its `website/` folder is the source for the public site (refresh steps are in that repo's README).
 
 ## Publish on GitHub Pages
 
@@ -39,4 +35,4 @@ The site shows `contact@chaosvibe.com`. Make that address exist before going liv
 forwarding (free with the domain) to your inbox, or a Microsoft 365 / Google Workspace mailbox. Adding
 mail does not touch the `A`/`CNAME` records above; it only adds `MX` records.
 
-Images come from the game repo (`website/img/hero.jpg`, `website/press/`).
+The game's screenshots in `img/` come from the game repo.
