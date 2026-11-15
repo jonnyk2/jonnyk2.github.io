@@ -106,14 +106,21 @@ main section { max-width: 1240px; margin: 0 auto; padding: clamp(50px, 9vh, 90px
 .badge { display: inline-block; margin: 0 0 18px; padding: 8px 14px; background: var(--bg2); color: var(--pink); font: 400 12px/1 var(--display); letter-spacing: 0.25em; text-transform: uppercase; }
 .info .logo { width: 100%; max-width: 400px; height: auto; display: block; margin: 0 0 14px; }
 /* Hero's Reach title lockup: the game's own illuminated look, not the studio's 16-bit style */
-.ts-logo { display: grid; justify-items: start; margin: 0 0 18px; max-width: 420px; }
+.ts-logo { display: grid; justify-items: start; margin: 0 0 22px; max-width: 540px; }
 .ts-word { display: flex; align-items: flex-end; gap: 2px; filter: drop-shadow(0 2px 0 #2b1a07) drop-shadow(0 8px 16px rgba(0,0,0,.6)); }
-.ts-initial { width: clamp(40px, 4.6vw, 60px); height: auto; margin-bottom: -.05em; }
-.ts-rest { font: 400 clamp(28px, 3.9vw, 48px)/.82 'Pirata One', Georgia, serif; background: linear-gradient(180deg, #fff0c8 0%, #e2bd76 55%, #b3833c 100%);
+.ts-initial { width: clamp(46px, 5.8vw, 76px); height: auto; margin-bottom: -.05em; }
+.ts-rest { font: 400 clamp(32px, 5vw, 62px)/.82 'Pirata One', Georgia, serif; background: linear-gradient(180deg, #fff0c8 0%, #e2bd76 55%, #b3833c 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent; }
 .ts-r { margin-left: clamp(6px, .9vw, 12px); }
 .ts-ribbon { width: 100%; height: auto; margin-top: -4px; }
 .info p { margin: 0 0 18px; color: #d8d0e8; }
+.info .tagline { margin: 0 0 20px; font: 400 clamp(20px, 2.6vw, 30px)/1.35 var(--display); letter-spacing: 0.06em; text-transform: uppercase; color: var(--cream); }
+.info .tagline span { color: var(--pink); }
+.tri-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: clamp(24px, 3.5vw, 40px); }
+.tri-cards .card { padding: 20px 22px; background: var(--bg2); border: 2px solid var(--line); }
+.tri-cards h3 { margin: 0 0 10px; font: 400 14px/1.2 var(--display); letter-spacing: 0.22em; text-transform: uppercase; color: var(--pink); }
+.tri-cards p { margin: 0; color: #d8d0e8; font-size: 15px; line-height: 1.6; }
+.shots figcaption { margin: 10px 2px 0; color: var(--dim); font: 400 11px/1.4 var(--display); letter-spacing: 0.2em; text-transform: uppercase; }
 .facts { margin: 0 0 26px; display: grid; gap: 8px; }
 .facts div { display: flex; gap: 14px; }
 .facts dt { width: 100px; flex: none; font: 400 12px/1.9 var(--display); letter-spacing: 0.2em; text-transform: uppercase; color: var(--dim); }
@@ -131,6 +138,7 @@ footer { border-top: 2px solid var(--line); padding: 26px 16px; text-align: cent
   .hero { grid-template-columns: 1fr; }
   .scene { order: -1; }
   .game { grid-template-columns: 1fr; }
+  .tri-cards, .shots { grid-template-columns: 1fr; }
   .cols { grid-template-columns: 1fr; gap: 18px; }
 }
 @media (max-width: 560px) {
