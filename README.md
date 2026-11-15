@@ -1,20 +1,20 @@
 # ChaosVibe studio website
 
-Static site: `index.html`, `style.css`, `img/`, `CNAME`, `emberwrought/`. No build step. Live at https://chaosvibe.com.
+Static site: `index.html`, `style.css`, `img/`, `CNAME`, `herosreach/`. No build step. Live at https://chaosvibe.com.
 
 Look: minimalist 16-bit. Fonts Silkscreen (display) and Pixelify Sans (body); navy `#0d0b1e`, cream, pink `#ff3d7f`.
 The pixel art is generated small and scaled up crisp (`image-rendering: pixelated`): `python tools/make_pixels.py`
 redraws `img/px-scene.png` (the hero scene), `img/og.png` (link preview). The 16-bit look is the studio's
-brand only: Emberwrought screenshots (`img/shot-*.jpg`) are always shown as captured, never pixelated.
+brand only: the game's screenshots (`img/shot-*.jpg`) are always shown as captured, never pixelated.
 
-## The Emberwrought website (`emberwrought/`)
+## The Hero's Reach website (`herosreach/`)
 
-A copy of the Emberwrought repo's `website/` folder (minus `gen.mjs`), served at
-`https://chaosvibe.com/emberwrought/`. The Emberwrought repo stays **private**; never make it public
+A copy of the game repo's `website/` folder (minus `gen.mjs`), served at
+`https://chaosvibe.com/herosreach/` (`emberwrought/` only holds redirects to it, for old links). The game repo stays **private**; never make it public
 to host the site. The source of truth is still `website/` in that repo: after it changes, refresh the copy
-from the Emberwrought repo root:
+from the game repo root:
 
-    S=~/chaosvibe-site/emberwrought; rm -rf $S && cp -r website $S && rm $S/gen.mjs
+    S=~/chaosvibe-site/herosreach; rm -rf $S && cp -r website $S && rm $S/gen.mjs
 
 then commit and push here.
 
@@ -39,4 +39,4 @@ The site shows `contact@chaosvibe.com`. Make that address exist before going liv
 forwarding (free with the domain) to your inbox, or a Microsoft 365 / Google Workspace mailbox. Adding
 mail does not touch the `A`/`CNAME` records above; it only adds `MX` records.
 
-Images come from the Emberwrought repo (`website/img/hero.jpg`, `website/press/`).
+Images come from the game repo (`website/img/hero.jpg`, `website/press/`).

@@ -5,8 +5,6 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '
 const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const ROLES = { tank: 'Tank', melee: 'Melee', ranged: 'Ranged', caster: 'Caster', summoner: 'Summoner', support: 'Support' };
 
-// the logo forges in letter by letter, like the game's title screen
-{ const h = $('.hero h1'); h.setAttribute('aria-label', h.textContent); h.innerHTML = [...h.textContent].map((c, i) => `<span aria-hidden="true" style="animation-delay:${0.2 + i * 0.06}s">${c}</span>`).join(''); }
 $$('[data-n]').forEach(el => el.textContent = E[el.dataset.n].length);
 
 // the reduced-motion visitor gets the poster, not the loop

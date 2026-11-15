@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hero's Reach — Coming 2027</title>
+<meta name="description" content="The last fire in the Hollowmark is going out. Hero's Reach is a dark fantasy action RPG: 24 classes, 16 peoples, 11 lands, levels 1 to 60, and a hearth of your own to defend. Closed alpha this December. Coming 2027.">
+<meta property="og:title" content="Hero's Reach —Chronicles of the Hollowmark · Coming 2027">
+<meta property="og:description" content="The last fire in the Hollowmark is going out. A dark fantasy action RPG. Sign up for the closed alpha.">
+<meta property="og:image" content="img/share.jpg">
+<meta name="theme-color" content="#0e0905">
+<!-- stand-in icon: the lockup's T on its crimson tile, until the finished icon exists -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 4 120 122'><rect x='6' y='10' width='108' height='114' rx='4' fill='%235a1520' stroke='%23e2bd76' stroke-width='5'/><path d='M22 28h34v4l-6 4v22h20V36l-6-4v-4h34v4l-6 4v64l6 4v4H64v-4l6-4V74H50v26l6 4v4H22v-4l6-4V36l-6-4z' fill='%23e2bd76'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="descent-page">
+<!-- Discord: every link with class "discord" points at the never-expiring invite to #emberwrought on the ChaosVibe server. -->
+<nav class="top">
+  <a class="brand" href="#top">Hero's Reach</a>
+  <span class="links"><a href="#gravenhold">The world</a><a href="#heroes">Heroes</a><a href="#devlog">Devlog</a><a class="pill" href="#top" data-signup>Sign up for the alpha</a></span>
+</nav>
+
+<!-- the depth gauge: where in the 1 to 60 descent the reader is -->
+<aside class="gauge" aria-hidden="true"><span class="gauge-line"><i></i></span><b class="gauge-lv">1</b><span class="gauge-name">Gravenhold</span></aside>
+
+<header class="hero" id="top">
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="media/hero-poster.jpg" aria-hidden="true">
+    <source src="media/hero.webm" type="video/webm">
+    <source src="media/hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-in">
+    <!-- the approved title lockup (herosreach-brand.md); the ribbon carries the subtitle. The same markup heads press, privacy and survey -->
+    <div class="lockup">
+      <h1 class="word">
+        <svg class="initial" viewBox="0 0 120 130" aria-hidden="true">
+          <defs><linearGradient id="ig" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff0c8"/><stop offset=".55" stop-color="#e2bd76"/><stop offset="1" stop-color="#a87631"/></linearGradient></defs>
+          <rect x="6" y="10" width="108" height="114" rx="4" fill="#5a1520" stroke="url(#ig)" stroke-width="4"/>
+          <rect x="13" y="17" width="94" height="100" rx="2" fill="none" stroke="#c9a061" stroke-width="1.2" stroke-dasharray="3 3"/>
+          <g fill="none" stroke="#c9a061" stroke-width="2" stroke-linecap="round" opacity=".85">
+            <path d="M22 108c10-14 2-26 14-32s18 6 10 12-16-2-10-10"/><path d="M98 108c-10-14-2-26-14-32s-18 6-10 12 16-2 10-10"/>
+            <path d="M22 30c8 6 18 2 20-6M98 30c-8 6-18 2-20-6"/>
+          </g>
+          <path d="M22 28h34v4l-6 4v22h20V36l-6-4v-4h34v4l-6 4v64l6 4v4H64v-4l6-4V74H50v26l6 4v4H22v-4l6-4V36l-6-4z" fill="url(#ig)" stroke="#3a2306" stroke-width="2"/>
+          <path d="M44 4l6 10 10-12 10 12 6-10 4 16H40z" fill="url(#ig)" stroke="#3a2306" stroke-width="1.5"/>
+          <circle cx="60" cy="14" r="2.6" fill="#9b1b2a"/>
+        </svg>
+        <span class="rest" aria-hidden="true">ero’s Reach</span><span class="sr">Hero's Reach</span>
+      </h1>
+      <svg class="ribbon" viewBox="0 0 560 92" role="img" aria-label="Chronicles of the Hollowmark">
+        <defs><linearGradient id="rg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7b5520"/><stop offset=".5" stop-color="#b98a3e"/><stop offset="1" stop-color="#6a4517"/></linearGradient></defs>
+        <path d="M54 34H10l15 17-15 17h44z" fill="#6a4517" stroke="#3a2306" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M506 34h44l-15 17 15 17h-44z" fill="#6a4517" stroke="#3a2306" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M18 39h30M18 63h30M512 39h30M512 63h30" stroke="#c9a061" stroke-width="1" opacity=".55"/>
+        <path d="M72 22 54 34v34l18-12z" fill="#3f280b"/>
+        <path d="M488 22l18 12v34l-18-12z" fill="#3f280b"/>
+        <path d="M72 22Q280 52 488 22V56Q280 86 72 56z" fill="url(#rg)" stroke="#3a2306" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M78 27Q280 57 482 27M78 51Q280 81 482 51" stroke="#e8c983" stroke-width="1.1" fill="none" opacity=".75"/>
+        <path id="rbt" d="M88 44Q280 76 472 44" fill="none"/>
+        <text font-family="'Cormorant Garamond', Georgia, serif" font-weight="700" font-size="15" letter-spacing="2.6" fill="#fff0c8" text-anchor="middle" dominant-baseline="middle"><textPath href="#rbt" startOffset="50%">CHRONICLES OF THE HOLLOWMARK</textPath></text>
+      </svg>
+      <div class="roundels" aria-hidden="true">
+        <svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#5a1520" stroke="#e2bd76" stroke-width="3"/><path d="M12 28 10 14l7 5 5-8 5 8 7-5-2 14z" fill="#e2bd76"/></svg>
+        <svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#2f4a2c" stroke="#e2bd76" stroke-width="3"/><path d="M22 8v24M15 26h14M22 32l-3 4h6z" stroke="#e2bd76" stroke-width="3" fill="none"/></svg>
+        <svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#1d2d52" stroke="#e2bd76" stroke-width="3"/><path d="M22 9l3 9 9 0-7 6 3 9-8-6-8 6 3-9-7-6 9 0z" fill="#e2bd76"/></svg>
+      </div>
+    </div>
+    <p class="when">Coming 2027</p>
+    <p class="hook">The last fire in the Hollowmark is going out. Be one of the first to carry it: a closed alpha runs this December, in your browser.</p>
+
+    <section id="alpha" class="signup" aria-label="Sign up for the alpha">
+      <form class="su-form" novalidate>
+        <label class="contact">Email or Discord name
+          <span class="row"><input name="contact" autocomplete="email" maxlength="254" placeholder="you@example.com or herofan" required><button type="submit" class="btn">Sign up</button></span>
+        </label>
+        <label class="chk consent"><input type="checkbox" name="consent" required> <span>I agree that Hero's Reach keeps my email or Discord name, my answers, my machine-check result (graphics chip, browser, system, frame rate) and my connection's IP address, only to choose alpha players, send invites and stop spam. Nothing is shared or sold. It's all deleted when the alpha ends, by 31 January 2027. To be removed sooner, ask on our Discord or reply to any email from us. <a href="privacy.html" target="_blank">Privacy details</a></span></label>
+        <label class="chk consent"><input type="checkbox" name="notify"> <span><b>Optional:</b> tell me when Hero's Reach launches on Steam. For this we keep only your email or Discord name, nothing else, never shared, until you ask us to remove it.</span></label>
+        <details class="more"><summary>Tell us what you play <span class="dim">(optional)</span></summary>
+          <fieldset><legend class="sr">What do you like to play?</legend>
+            <label class="chk"><input type="checkbox" name="plays" value="arpg"> Action RPGs</label>
+            <label class="chk"><input type="checkbox" name="plays" value="building"> Building and farming</label>
+            <label class="chk"><input type="checkbox" name="plays" value="new"> I'm new to games like this</label>
+            <label class="chk"><input type="checkbox" name="plays" value="other"> Something else</label>
+          </fieldset>
+          <label>Anything you'd like us to know? <input name="about" maxlength="300"></label>
+        </details>
+        <label class="hp" aria-hidden="true">Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label>
+        <p class="fine">Signing up runs a 10-second 3D test, so we can invite a good mix of machines.</p>
+        <p class="fine actions"><button type="button" class="link mc-skip">Sign up without the test</button><button type="button" class="link mc-only">Just test my machine</button></p>
+        <p class="su-msg" aria-live="polite"></p>
+      </form>
+      <div class="mc" hidden>
+        <canvas class="mc-canvas" width="640" height="360" hidden></canvas>
+        <p class="mc-out" aria-live="polite"></p>
+        <div class="mc-verdict" hidden aria-live="polite"><b></b><p></p><small></small></div>
+      </div>
+      <div class="su-done" hidden><h2>You're on the list</h2><p></p><a class="btn ghost discord" href="https://discord.gg/D5G8zKWHCp" target="_blank" rel="noopener">Join the Discord</a></div>
+      <p class="closes">Sign-ups close Friday 11 December, 23:59 UTC.</p>
+    </section>
+  </div>
+</header>
+
+<main class="descent">
+<section id="gravenhold" class="depth" data-lv="1" data-name="Gravenhold" style="--tint: 34, 22, 14">
+  <div class="split">
+    <figure class="wide"><img src="img/gravenhold.jpg" alt="The market square of Gravenhold at night, lamps lit" loading="lazy"></figure>
+    <div class="txt">
+      <h2>Gravenhold, the last lit town</h2>
+      <p>Under the keep and the cathedral, the market still trades and Captain Hask still posts bounties. Beyond the walls, the dead no longer stay buried.</p>
+      <p>Raise your own hearth on the ruins of a dead one. You choose what to build and your villagers raise it over time. Crops grow in real time, even while you're away, and salvage fills your storehouse.</p>
+    </div>
+    <figure class="tall"><img src="img/cathedral.jpg" alt="The cathedral and timbered houses at the edge of Gravenhold" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="depth" data-lv="5" data-name="The Hollowmark" style="--tint: 24, 20, 12">
+  <div class="split flip">
+    <div class="txt">
+      <h2>The wilds hunt back</h2>
+      <p>Named monsters roam the Barrow Fields, the Blightwood, the Mirefen and the Cinderwaste. Raiders hold a walled fort in every land, and when all three beacons burn, the Dread Rifts open.</p>
+    </div>
+    <figure class="wide"><img src="img/fort.jpg" alt="A warrior storming a raider fort in the Hollowmark" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="depth" data-lv="12" data-name="The fight" style="--tint: 22, 14, 12">
+  <div class="split">
+    <figure class="wide"><img src="img/fight.jpg" alt="A huntsman holding a road against frost beasts in the Frostfang Highlands" loading="lazy"></figure>
+    <div class="txt">
+      <h2>Every swing is yours</h2>
+      <p>Move with WASD and aim with the mouse. Chain light and heavy attacks into combos, roll through a wind-up, block, and time your parries.</p>
+      <p>Weapons are built from parts that change how they fight, and fire, frost, lightning and poison combo off each other.</p>
+    </div>
+    <figure class="tall"><img src="img/cast.jpg" alt="A pyromancer's cinder barrage bursting among scarabs in the Sunscar Desert" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="depth" data-lv="14" data-name="The deep" style="--tint: 14, 10, 12">
+  <div class="split flip">
+    <div class="txt">
+      <h2>The deep is never the same twice</h2>
+      <p>Every dungeon is rebuilt when you enter, with traps, ambushes and rising Dread, and a boss at the bottom. Clear it and it comes back deeper and richer. Below the mountains, the caves go down two floors more.</p>
+    </div>
+    <figure class="wide"><img src="img/crypt.jpg" alt="A templar facing Morvane, the Hollow Bishop, in the Hollow Crypt" loading="lazy"></figure>
+  </div>
+  <figure class="full"><img src="img/forge.jpg" alt="A berserker facing Varg the Slagborn in the Forge-Pit" loading="lazy"></figure>
+  <div class="bosses"><h3>Waiting at the bottom</h3><ul></ul></div>
+</section>
+
+<section id="heroes" class="depth" data-lv="17" data-name="Heroes" style="--tint: 12, 9, 14">
+  <h2 class="center"><span data-n="classes">24</span> heroes, sixteen peoples</h2>
+  <p class="center lead">Play as a human or a dwarf, a crow-headed Rookfolk, an ash-skinned Ashborn, a Croakfolk, a Shellback or a Pandakin, and choose how they fight.</p>
+  <div class="roster">
+    <div class="names" role="tablist" aria-label="Classes"></div>
+    <article class="hero-card" role="tabpanel" aria-live="polite"></article>
+  </div>
+</section>
+
+<section id="journey" class="depth" data-lv="18" data-name="Beyond the Hollowmark" style="--tint: 8, 6, 14">
+  <h2 class="center">The road from 1 to 60</h2>
+  <p class="center lead">Ten more lands lie past the Hollowmark, each with a camp, a fort and dungeons of its own, all the way to the edge of everything.</p>
+  <ol class="road"></ol>
+</section>
+
+<section id="devlog" class="depth devlog" data-lv="60" data-name="Devlog" style="--tint: 6, 5, 8">
+  <h2 class="center">Forged in the open</h2>
+  <p class="center lead">Hero's Reach is made by one developer, in public, a build at a time.</p>
+  <ol class="log">
+    <li><figure><img src="img/devlog/2026-11-15.jpg" alt="Gravenhold in the Unity build, with its townsfolk" loading="lazy"></figure><div><time datetime="2026-11-15">15 November 2026</time><h3>Rebuilt in Unity: the same world, a new engine</h3><p>The game is moving from the browser to Unity, so it can grow into the online world it was always meant to be. Two days in, the Unity build has caught up: real terrain with shadows, day and night, the parchment interface, all 370 skills with new spell effects, quests, your own homestead with rooms inside, townsfolk and music.</p></div></li>
+    <li><figure><img src="img/devlog/2026-11-11.jpg" alt="Gravenhold at night with the new keep" loading="lazy"></figure><div><time datetime="2026-11-11">11 November 2026</time><h3>A grand keep, a cathedral and forts in every land</h3><p>Gravenhold rebuilt and relit, a walled fort for each land's raiders, caves under the mountains, and sixteen peoples to play.</p></div></li>
+    <li><figure><img src="img/devlog/2026-11-07.jpg" alt="The Hollow Crypt in the 7 November build" loading="lazy"></figure><div><time datetime="2026-11-07">7 November 2026</time><h3>Monsters in 3D, stances, blocks and parries</h3><p>The bestiary moved to 3D models, and fights gained blocking, parries and stances.</p></div></li>
+    <li><figure><img src="img/devlog/2026-11-03.jpg" alt="The Hollow Crypt in the first playable build" loading="lazy"></figure><div><time datetime="2026-11-03">3 November 2026</time><h3>The first playable build</h3><p>Gravenhold, three dungeons and their bosses, playable free in the browser on itch.io.</p></div></li>
+  </ol>
+  <h3 class="center wip-title">Work in progress: the move to Unity, before and after</h3>
+  <div class="wip">
+    <figure><a href="img/devlog/2026-11-15/01-gravenhold-web.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/01-gravenhold-web.jpg" alt="Gravenhold in the web build" loading="lazy"></a><figcaption>Gravenhold in the web build</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/02-gravenhold-unity-first-port.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/02-gravenhold-unity-first-port.jpg" alt="Gravenhold in the first Unity port" loading="lazy"></a><figcaption>Gravenhold in the first Unity port</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/03-gravenhold-unity-now.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/03-gravenhold-unity-now.jpg" alt="Gravenhold in Unity now, with its townsfolk" loading="lazy"></a><figcaption>Gravenhold in Unity now, with its townsfolk</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/04-gravenhold-night.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/04-gravenhold-night.jpg" alt="Gravenhold at night: lit windows and lamps" loading="lazy"></a><figcaption>Gravenhold at night: lit windows and lamps</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/05-barrow-fields-web.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/05-barrow-fields-web.jpg" alt="The Barrow Fields, web build" loading="lazy"></a><figcaption>The Barrow Fields, web build</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/06-barrow-fields-unity.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/06-barrow-fields-unity.jpg" alt="The Barrow Fields in Unity" loading="lazy"></a><figcaption>The Barrow Fields in Unity</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/07-blightwood-web.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/07-blightwood-web.jpg" alt="The Blightwood, web build" loading="lazy"></a><figcaption>The Blightwood, web build</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/08-blightwood-unity.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/08-blightwood-unity.jpg" alt="The Blightwood in Unity" loading="lazy"></a><figcaption>The Blightwood in Unity</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/09-regions-before-after.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/09-regions-before-after.jpg" alt="All eleven regions, before and after" loading="lazy"></a><figcaption>All eleven regions, before and after</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/10-hud.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/10-hud.jpg" alt="The new interface" loading="lazy"></a><figcaption>The new interface</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/11-talents.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/11-talents.jpg" alt="Talents and skills" loading="lazy"></a><figcaption>Talents and skills</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/12-world-map.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/12-world-map.jpg" alt="The world map" loading="lazy"></a><figcaption>The world map</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/13-bounty-board.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/13-bounty-board.jpg" alt="Captain Hask's bounty board" loading="lazy"></a><figcaption>Captain Hask's bounty board</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/14-homestead-building.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/14-homestead-building.jpg" alt="A barracks going up at your homestead" loading="lazy"></a><figcaption>A barracks going up at your homestead</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/15-homestead-interior.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/15-homestead-interior.jpg" alt="Inside your home" loading="lazy"></a><figcaption>Inside your home</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/16-spell-effects.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/16-spell-effects.jpg" alt="Spell effects, one per element" loading="lazy"></a><figcaption>Spell effects, one per element</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/17-animations.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/17-animations.jpg" alt="Every weapon, every move" loading="lazy"></a><figcaption>Every weapon, every move</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/18-zone-painter.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/18-zone-painter.jpg" alt="Painting the world with the zone painter" loading="lazy"></a><figcaption>Painting the world with the zone painter</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/19-fort-night.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/19-fort-night.jpg" alt="A fort at night" loading="lazy"></a><figcaption>A fort at night</figcaption></figure>
+    <figure><a href="img/devlog/2026-11-15/20-title.jpg" target="_blank" rel="noopener"><img src="img/devlog/2026-11-15/20-title.jpg" alt="The title screen" loading="lazy"></a><figcaption>The title screen</figcaption></figure>
+  </div>
+</section>
+
+<div class="torn" aria-hidden="true"></div>
+<section id="discord" class="final">
+  <h2>The fire returns in 2027</h2>
+  <p>Sign up for the closed alpha this December, or join the community to follow the build.</p>
+  <div class="cta"><a class="btn" href="#top" data-signup>Sign up for the alpha</a><a class="btn ghost discord" href="https://discord.gg/D5G8zKWHCp" target="_blank" rel="noopener">Join the Discord</a></div>
+</section>
+</main>
+
+<footer>Hero's Reach ·Chronicles of the Hollowmark · A <a href="https://chaosvibe.com">ChaosVibe</a> game · <a href="press.html">Press kit</a> · <a href="privacy.html">Privacy</a></footer>
+
+<script src="data.js"></script>
+<script src="site.js"></script>
+<script type="module" src="alpha.js"></script>
+</body>
+</html>
